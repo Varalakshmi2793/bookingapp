@@ -19,7 +19,7 @@ form.addEventListener('submit',async function(event){
         if(response.ok){
             console.log("form submitted successfully");
             form.reset();
-            
+            window.location.href="/api/user";
             await updateuserlist();        
         }
         else{
@@ -42,7 +42,7 @@ form.addEventListener('submit',async function(event){
             useritem.appendChild(text);
             userlist.appendChild(useritem);
         });
-        window.location.href="/api/user";
+        
         }
         catch(err)
         {
